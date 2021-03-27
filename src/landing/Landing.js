@@ -1,24 +1,18 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import style from "./landing.module.scss";
 import chatapp from "./projectphotos/chatapp.png";
 import covidTracker from "./projectphotos/covidTracker.png";
-import playlists from "./projectphotos/playlists.png";
-import tesla from "./projectphotos/tesla-clone.png";
-import readdit from "./projectphotos/readdit.png";
-import {
-  useTransition,
-  useSpring,
-  useChain,
-  config,
-  animated,
-} from "react-spring";
-
+import { ReactComponent as CssIcon } from "./projectphotos/css3.svg";
 import { ReactComponent as GitIcon } from "./projectphotos/github.svg";
 import { ReactComponent as HtmlIcon } from "./projectphotos/html5.svg";
 import { ReactComponent as JsIcon } from "./projectphotos/javascript.svg";
-import { ReactComponent as CssIcon } from "./projectphotos/css3.svg";
-import { ReactComponent as ReactIcon } from "./projectphotos/react.svg";
 import { ReactComponent as NodeIcon } from "./projectphotos/node.svg";
+import playlists from "./projectphotos/playlists.png";
+import { ReactComponent as ReactIcon } from "./projectphotos/react.svg";
+import readdit from "./projectphotos/readdit.png";
+import tesla from "./projectphotos/tesla-clone.png";
+import portfolio from "./projectphotos/portfolio.png";
+import { Link } from "react-router-dom";
 const Landing = () => {
   const techImages = [
     {
@@ -34,18 +28,15 @@ const Landing = () => {
       image: <HtmlIcon className={style["tech-icon"]} />,
       name: "Html",
     },
-
     {
       image: <CssIcon className={style["tech-icon"]} />,
       name: "Css",
     },
   ];
-
   useEffect(() => {
     const containerTarget = document.getElementsByClassName(
       style["image-container"]
     )[0];
-
     containerTarget.childNodes.forEach((ele, i) => {
       ele.style.opacity = 1;
       ele.style.transition = `opacity ${
@@ -53,29 +44,8 @@ const Landing = () => {
       }s cubic-bezier(0.5, 0, 0, 1.5) 0s`;
     });
   }, []);
-  // const springRef = useRef();
-  // const { size, opacity, ...rest } = useSpring({
-  //   ref: springRef,
-  //   config: config.stiff,
-  //   from: { size: "20%", background: "hotpink" },
-  //   to: { size: true ? "100%" : "20%", background: true ? "white" : "hotpink" },
-  // });
-  // const transRef = useRef();
-  // const transitions = useTransition(true ? techImages : [], (item) => item, {
-  //   ref: transRef,
-  //   unique: true,
-  //   trail: 400 / techImages.length,
-  //   from: { opacity: 0, transform: "scale(0)" },
-  //   enter: { opacity: 1, transform: "scale(1)" },
-  //   leave: { opacity: 0, transform: "scale(0)" },
-  // });
-  // useChain(true ? [springRef, transRef] : [transRef, springRef], [
-  //   0,
-  //   true ? 0.1 : 0.6,
-  // ]);
   return (
     <div className={style["wrapper"]}>
-      {/* <div className={style["tech-wrapper"]}></div> */}
       <div className={style["center-container"]}>
         <div className={style["container"]}>
           <div className={style["text-container"]}>
@@ -87,40 +57,74 @@ const Landing = () => {
             </h4>
           </div>
           <div className={style["image-container"]}>
-            <div className={style["project-container"]}>
+            <Link
+              to={{
+                pathname: "https://github.com/ajl0023/chatApp",
+              }}
+              target="_blank"
+              className={style["project-container"]}
+            >
               <GitIcon className={style["git-icon"]} />
               <img src={chatapp} className={style["project-image"]} />
-            </div>
-
-            <div className={style["project-container"]}>
+            </Link>
+            <Link
+              to={{
+                pathname: "https://github.com/ajl0023/Covid-tracker",
+              }}
+              target="_blank"
+              className={style["project-container"]}
+            >
               {" "}
               <GitIcon className={style["git-icon"]} />
               <img src={covidTracker} className={style["project-image"]} />
-            </div>
-            <div className={style["project-container"]}>
+            </Link>
+            <Link
+              to={{
+                pathname: "https://github.com/ajl0023/readit",
+              }}
+              target="_blank"
+              className={style["project-container"]}
+            >
+              {" "}
+              <GitIcon className={style["git-icon"]} />
+              <img src={readdit} className={style["project-image"]} />
+            </Link>
+            <Link
+              to={{
+                pathname: "https://github.com/ajl0023/spotifyPlaylists",
+              }}
+              target="_blank"
+              className={style["project-container"]}
+            >
               {" "}
               <GitIcon className={style["git-icon"]} />
               <img src={playlists} className={style["project-image"]} />
-            </div>
-            <div className={style["project-container"]}>
+            </Link>
+            <Link
+              to={{
+                pathname: "https://github.com/ajl0023/tesla-clone",
+              }}
+              target="_blank"
+              className={style["project-container"]}
+            >
               {" "}
               <GitIcon className={style["git-icon"]} />
-              <img src={playlists} className={style["project-image"]} />
-            </div>
-            <div className={style["project-container"]}>
+              <img src={tesla} className={style["project-image"]} />
+            </Link>
+            <Link
+              to={{
+                pathname: "https://github.com/ajl0023/portfolio",
+              }}
+              target="_blank"
+              className={style["project-container"]}
+            >
               {" "}
               <GitIcon className={style["git-icon"]} />
-              <img src={playlists} className={style["project-image"]} />
-            </div>
-            <div className={style["project-container"]}>
-              {" "}
-              <GitIcon className={style["git-icon"]} />
-              {/* <img
-                className={style["project-container"]}
-                src=""
-                className={style["project-image"]}
-              /> */}
-            </div>
+              <img
+                src={portfolio}
+                className={`${style["project-image"]} ${style["portfolio-image"]}`}
+              />
+            </Link>
           </div>
         </div>
         <div className={style["tech-wrapper"]}>
@@ -128,9 +132,6 @@ const Landing = () => {
             Technologies used in these projects
           </p>
           <div className={style["tech-icon-container"]}>
-            {/* {transitions.map(({ item, key, props }) => {
-              <animated.div style={{ ...props }}></animated.div>;
-            })} */}
             {techImages.map((img) => {
               return (
                 <div className={style["icon-container"]}>
@@ -145,5 +146,4 @@ const Landing = () => {
     </div>
   );
 };
-
 export default Landing;

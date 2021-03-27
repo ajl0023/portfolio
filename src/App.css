@@ -1,23 +1,27 @@
 .language-js {
-  font-size: 1vw !important;
+  font-size: 0.8vw !important;
   background-color: transparent !important;
-
-  /* white-space: normal !important; */
   word-break: break-word !important;
-}
-html {
-  background-color: red;
 }
 .code-toolbar {
   max-width: 100%;
 }
 pre {
   white-space: pre-wrap !important;
-  /* word-break: break-all; */
-  /* width: 100%; */
 }
 .app-wrapper {
-  width: 100vw;
   height: 100vh;
-  background-color: green;
+  width: 100vw;
+  overflow-x: hidden;
+}
+html,
+body {
+  height: 100vh;
+}
+#root {
+  position: absolute;
+  height: 100vh;
+}
+.toolbar-item {
+  display: none !important;
 }

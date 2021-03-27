@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import Landing from "./landing/Landing";
-
-import { CSSTransitionGroup } from "react-transition-group"; // ES6
-import Navbar from "./navbar/Navbar";
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import About from "./about/About";
-import style from "./app.module.scss";
 import "./App.css";
+import Landing from "./landing/Landing";
+import Navbar from "./navbar/Navbar";
 const App = () => {
   return (
     <div className="app-wrapper">
-      <Navbar />
-      <Landing />
-      <About />
+      <Router>
+        <Navbar />
+        <Landing />
+        <About />
+      </Router>
     </div>
   );
 };
