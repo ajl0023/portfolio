@@ -1,9 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "portfolio", 
+  "homepage": "https://github.com/ajl0023/portfolio",
   "version": "0.1.0",
   "private": true,
- 
-  "homepage": "https://github.com/ajl0023/portfolio/",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
@@ -76,9 +75,11 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js" ,"deploy": "gh-pages -d build"
+    "test": "node scripts/test.js" ,
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
