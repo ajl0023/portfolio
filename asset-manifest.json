@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.5a54a20e.chunk.css",
+    "main.js": "/portfolio/static/js/main.04514b1c.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.04514b1c.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.43d9a0ba.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.43d9a0ba.js.map",
+    "static/css/2.f16753bd.chunk.css": "/portfolio/static/css/2.f16753bd.chunk.css",
+    "static/js/2.07880ef7.chunk.js": "/portfolio/static/js/2.07880ef7.chunk.js",
+    "static/js/2.07880ef7.chunk.js.map": "/portfolio/static/js/2.07880ef7.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "static/css/2.f16753bd.chunk.css.map": "/portfolio/static/css/2.f16753bd.chunk.css.map",
+    "static/css/main.5a54a20e.chunk.css.map": "/portfolio/static/css/main.5a54a20e.chunk.css.map",
+    "static/js/2.07880ef7.chunk.js.LICENSE.txt": "/portfolio/static/js/2.07880ef7.chunk.js.LICENSE.txt",
+    "static/media/about.module.scss": "/portfolio/static/media/circular-bold.f9fedd6f.woff2",
+    "static/media/chatapp.5caf81fd.png": "/portfolio/static/media/chatapp.5caf81fd.png",
+    "static/media/covidTracker.a36f905f.png": "/portfolio/static/media/covidTracker.a36f905f.png",
+    "static/media/css3.c1a6e319.svg": "/portfolio/static/media/css3.c1a6e319.svg",
+    "static/media/github.16a9304e.svg": "/portfolio/static/media/github.16a9304e.svg",
+    "static/media/gmail.9e34ea5d.svg": "/portfolio/static/media/gmail.9e34ea5d.svg",
+    "static/media/html5.d4e1a168.svg": "/portfolio/static/media/html5.d4e1a168.svg",
+    "static/media/javascript.c981b611.svg": "/portfolio/static/media/javascript.c981b611.svg",
+    "static/media/laptop.67104792.svg": "/portfolio/static/media/laptop.67104792.svg",
+    "static/media/linkedin.03f1d164.svg": "/portfolio/static/media/linkedin.03f1d164.svg",
+    "static/media/node.351cbfb3.svg": "/portfolio/static/media/node.351cbfb3.svg",
+    "static/media/playlists.2a4a7109.png": "/portfolio/static/media/playlists.2a4a7109.png",
+    "static/media/react.0c61afcf.svg": "/portfolio/static/media/react.0c61afcf.svg",
+    "static/media/readdit.40606b8f.png": "/portfolio/static/media/readdit.40606b8f.png",
+    "static/media/tesla-clone.6fd4db15.png": "/portfolio/static/media/tesla-clone.6fd4db15.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43d9a0ba.js",
+    "static/css/2.f16753bd.chunk.css",
+    "static/js/2.07880ef7.chunk.js",
+    "static/css/main.5a54a20e.chunk.css",
+    "static/js/main.04514b1c.chunk.js"
+  ]
+}
