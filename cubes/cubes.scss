@@ -1,70 +1,57 @@
-.cubes
-{
-  .cube
-  {
+.cubes {
+  .cube {
     position: absolute;
     height: 100px;
     width: 100px;
     margin: 0;
-
-    animation: cube-fade-in 2s cubic-bezier(.165, .84, .44, 1);
+    z-index: 1;
+    animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
     will-change: transform;
 
-    @keyframes cube-fade-in
-    {
-      0%
-      {
+    @keyframes cube-fade-in {
+      0% {
         opacity: 0;
-        transform: scale(.5)
+        transform: scale(0.5);
       }
     }
 
-    *
-    {
+    * {
+      z-index: 1;
       position: absolute;
       height: 100%;
       width: 100%;
     }
 
-    .shadow
-    {
+    .shadow {
       background: #07427a;
       top: 40%;
     }
 
-    .sides
-    {
+    .sides {
       transform-style: preserve-3d;
       perspective: 600px;
 
-      div
-      {
+      div {
         backface-visibility: hidden;
         will-change: transform;
       }
 
-      .front
-      {
+      .front {
         transform: rotateY(0deg) translateZ(50px);
       }
-      .back
-      {
+      .back {
         transform: rotateY(-180deg) translateZ(50px);
       }
-      .left
-      {
+      .left {
         transform: rotateY(-90deg) translateZ(50px);
       }
-      .right
-      {
+      .right {
         transform: rotateY(90deg) translateZ(50px);
       }
-      .top
-      {
+      .top {
         transform: rotateX(90deg) translateZ(50px);
       }
-      .bottom
-      {
+      .bottom {
         transform: rotateX(-90deg) translateZ(50px);
       }
     }

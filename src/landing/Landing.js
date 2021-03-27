@@ -91,6 +91,12 @@ const Landing = () => {
               <GitIcon className={style["git-icon"]} />
               <img src={chatapp} className={style["project-image"]} />
             </div>
+
+            <div className={style["project-container"]}>
+              {" "}
+              <GitIcon className={style["git-icon"]} />
+              <img src={covidTracker} className={style["project-image"]} />
+            </div>
             <div className={style["project-container"]}>
               {" "}
               <GitIcon className={style["git-icon"]} />
@@ -99,27 +105,21 @@ const Landing = () => {
             <div className={style["project-container"]}>
               {" "}
               <GitIcon className={style["git-icon"]} />
-              <img src={covidTracker} className={style["project-image"]} />
-            </div>
-
-            <div className={style["project-container"]}>
-              {" "}
-              <GitIcon className={style["git-icon"]} />
-              <img src={readdit} className={style["project-image"]} />
+              <img src={playlists} className={style["project-image"]} />
             </div>
             <div className={style["project-container"]}>
               {" "}
               <GitIcon className={style["git-icon"]} />
-              <img src={tesla} className={style["project-image"]} />
+              <img src={playlists} className={style["project-image"]} />
             </div>
             <div className={style["project-container"]}>
               {" "}
               <GitIcon className={style["git-icon"]} />
-              <img
+              {/* <img
                 className={style["project-container"]}
                 src=""
                 className={style["project-image"]}
-              />
+              /> */}
             </div>
           </div>
         </div>
@@ -134,8 +134,8 @@ const Landing = () => {
             {techImages.map((img) => {
               return (
                 <div className={style["icon-container"]}>
-                  <span className={style["icon-label"]}>{img.name}</span>
                   {img.image}
+                  <p className={style["icon-label"]}>{img.name}</p>
                 </div>
               );
             })}

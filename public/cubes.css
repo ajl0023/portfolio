@@ -1,16 +1,23 @@
 .square-container {
-  position: absolute;
+  position: fixed;
   width: 500px;
   height: 500px;
+  z-index: 1;
+  display: none;
+}
+
+.cubes {
+  z-index: 1;
 }
 
 .cubes .cube {
+  z-index: 1;
   position: absolute;
   height: 100px;
   width: 100px;
   margin: 0;
   -webkit-animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
-          animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: cube-fade-in 2s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: transform;
 }
 
@@ -18,7 +25,7 @@
   0% {
     opacity: 0;
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
 }
 
@@ -26,11 +33,12 @@
   0% {
     opacity: 0;
     -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
   }
 }
 
 .cubes .cube * {
+  z-index: 1;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -43,44 +51,50 @@
 
 .cubes .cube .sides {
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-perspective: 600px;
-          perspective: 600px;
+  perspective: 600px;
 }
 
 .cubes .cube .sides div {
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   will-change: transform;
 }
 
 .cubes .cube .sides .front {
+  z-index: 1 !important;
   -webkit-transform: rotateY(0deg) translateZ(50px);
-          transform: rotateY(0deg) translateZ(50px);
+  transform: rotateY(0deg) translateZ(50px);
 }
 
 .cubes .cube .sides .back {
+  z-index: 1 !important;
   -webkit-transform: rotateY(-180deg) translateZ(50px);
-          transform: rotateY(-180deg) translateZ(50px);
+  transform: rotateY(-180deg) translateZ(50px);
 }
 
 .cubes .cube .sides .left {
+  z-index: 1 !important;
   -webkit-transform: rotateY(-90deg) translateZ(50px);
-          transform: rotateY(-90deg) translateZ(50px);
+  transform: rotateY(-90deg) translateZ(50px);
 }
 
 .cubes .cube .sides .right {
+  z-index: 1 !important;
   -webkit-transform: rotateY(90deg) translateZ(50px);
-          transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) translateZ(50px);
 }
 
 .cubes .cube .sides .top {
+  z-index: 1 !important;
   -webkit-transform: rotateX(90deg) translateZ(50px);
-          transform: rotateX(90deg) translateZ(50px);
+  transform: rotateX(90deg) translateZ(50px);
 }
 
 .cubes .cube .sides .bottom {
+  z-index: 1 !important;
   -webkit-transform: rotateX(-90deg) translateZ(50px);
-          transform: rotateX(-90deg) translateZ(50px);
+  transform: rotateX(-90deg) translateZ(50px);
 }
 /*# sourceMappingURL=cubes.css.map */

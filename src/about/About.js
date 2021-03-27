@@ -1,102 +1,110 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./about.module.scss";
 import { ReactComponent as Laptop } from "./images/laptop.svg";
 import Prism from "prismjs";
 
 const About = () => {
   const [content, setContent] = useState("");
-  //   useEffect(() => {
-  //     const line1 = document.getElementById("client-1");
-  //     var i = 0;
-  //     var txt = "const app = express();";
-  //     var speed = 50;
-  //     function typeWriter() {
-  //       if (i < txt.length) {
-  //         setContent(line1.innerHTML);
-  //         line1.innerHTML += txt.charAt(i);
-  //         i++;
-  //         setTimeout(typeWriter, speed);
-  //       }
-  //     }
-  //     typeWriter();
-  //   }, []);
-  const code = `
-const foo = 'foo';
-const bar = 'bar';
-console.log(foo + bar);
-`.trim();
+  const svgRef = useRef();
+  useEffect(() => {}, []);
   useEffect(() => {
-    console.log(12);
-    setTimeout(() => Prism.highlightAll(), 1000);
+    const trackSvg = (entries, observer) => {
+      if (entries[0].isIntersecting) {
+        const server = document.getElementById("server-text");
+        const client = document.getElementById("client-text");
+        var i = 0;
+        var txt = `const app = express(); \n app.get('api/skills', (req,res) => { \n res.json(["React","Javascript", \n "nodeJS", "CSS", "HTML"])})`;
+        var speed = 10;
+        function serverAnimation() {
+          if (i < txt.length) {
+            setContent(server.innerHTML);
+            server.innerHTML += txt.charAt(i);
+            i++;
+            const timeout = setTimeout(serverAnimation, speed);
+            if (i === txt.length) {
+              clearTimeout(timeout);
+              i = 0;
+              clientAnimation();
+            }
+
+            // txt = ``;
+          }
+        }
+
+        function clientAnimation() {
+          let txt = `const mySkills = await axios.get('/api/skills') console.log(mySkills.data)`;
+
+          if (i < txt.length) {
+            setContent(client.innerHTML);
+            client.innerHTML += txt.charAt(i);
+
+            i++;
+            setTimeout(clientAnimation, speed);
+          }
+        }
+        observer.disconnect();
+        serverAnimation();
+      }
+    };
+    let options = {
+      threshold: [0.2],
+    };
+    let observer = new IntersectionObserver(trackSvg, options);
+    observer.observe(svgRef.current);
+  }, []);
+  useEffect(() => {
+    window.Prism.highlightAll();
   }, [content]);
   return (
     <div className={style["container"]}>
       <div className={style["color-container"]}></div>
       <div className={style["main-content"]}>
         <div className={style["code-editor-container"]}>
-          <Laptop className={style["laptop-svg"]} />
+          <Laptop ref={svgRef} className={style["laptop-svg"]} />
           <div className={style["code-editor"]}>
             <div className={style["client-editor"]}>
               <div className={style["line-number-container"]}>
                 <div className={style["line-container"]}>
-                  <li className={style["line-number"]}>1</li>
-                  <span className={style["code-line "]}>
-                    const skills = await axios.get('/api/skills')
-                  </span>
+                  <pre className={"line-numbers"}>
+                    <code
+                      id="client-text"
+                      className={`language-js ${style[3]}`}
+
+                      // className={style["code-line"]}
+                    ></code>
+                  </pre>
                 </div>
-                <div className={style["line-container"]}>
-                  <li className={style["line-number"]}>2</li>
-                  <span className={style["code-line"]}>
-                    console.log(skills)
-                  </span>
-                </div>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
               </div>
             </div>
             <div className={style["server-editor"]}>
               <div className={style["line-number-container"]}>
-                <div className={style["line-container"]}>
-                  <li className={style["line-number"]}>1</li>
-                  <code
-                    id="client-1"
-                    className="language-js"
+                {/* <div className={style["line-container"]}>
+                  <pre className={"line-numbers"}>
+                    <code
+                      id="server-text"
+                      className={`language-js ${style[3]}`}
 
-                    // className={style["code-line"]}
-                  >
-                    {code}
-                  </code>
-                </div>
+                      // className={style["code-line"]}
+                    ></code>
+                  </pre>
+                </div> */}
                 <div className={style["line-container"]}>
-                  <li className={style["line-number"]}>2</li>
-                  <span className={style["code-line"]}>
-                    {`app.get('api/skills', (req,res) =>`}
-                  </span>
-                </div>
-                <div className={style["line-container"]}>
-                  <li className={style["line-number"]}>3</li>
-                  <span className={style["code-line"]}>
-                    {`res.json(["React","Javascript", "nodeJS",`}
-                  </span>
-                </div>
+                  <pre className={"line-numbers"}>
+                    <code
+                      id="server-text"
+                      className={`language-js ${style[3]}`}
 
-                <div className={style["line-container"]}>
-                  <li className={style["line-number"]}>4</li>
-                  <span
-                    className={style["code-line"]}
-                  >{`"CSS", "HTML"]))`}</span>
+                      // className={style["code-line"]}
+                    ></code>
+                  </pre>
                 </div>
-                <li>5</li>
-                <li>6</li>
               </div>
             </div>
           </div>
         </div>
 
         <div className={style["text-content"]}>
-          <div className={style["line-header"]}></div>
+          {/* <div className={style["line-header"]}></div> */}
           <div className={style["text-container"]}>
             <h3 className={style["main-header"]}>Javascript developer</h3>{" "}
             <p className={style["description"]}>
