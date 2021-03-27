@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b39d9b7b.chunk.css",
-    "main.js": "/portfolio/static/js/main.d709c349.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.d709c349.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.60fb2cc4.chunk.css",
+    "main.js": "/portfolio/static/js/main.ebb44acd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.ebb44acd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.43d9a0ba.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.43d9a0ba.js.map",
     "static/css/2.f16753bd.chunk.css": "/portfolio/static/css/2.f16753bd.chunk.css",
-    "static/js/2.07880ef7.chunk.js": "/portfolio/static/js/2.07880ef7.chunk.js",
-    "static/js/2.07880ef7.chunk.js.map": "/portfolio/static/js/2.07880ef7.chunk.js.map",
+    "static/js/2.08be2a1e.chunk.js": "/portfolio/static/js/2.08be2a1e.chunk.js",
+    "static/js/2.08be2a1e.chunk.js.map": "/portfolio/static/js/2.08be2a1e.chunk.js.map",
     "index.html": "/portfolio/index.html",
     "static/css/2.f16753bd.chunk.css.map": "/portfolio/static/css/2.f16753bd.chunk.css.map",
-    "static/css/main.b39d9b7b.chunk.css.map": "/portfolio/static/css/main.b39d9b7b.chunk.css.map",
-    "static/js/2.07880ef7.chunk.js.LICENSE.txt": "/portfolio/static/js/2.07880ef7.chunk.js.LICENSE.txt",
+    "static/css/main.60fb2cc4.chunk.css.map": "/portfolio/static/css/main.60fb2cc4.chunk.css.map",
+    "static/js/2.08be2a1e.chunk.js.LICENSE.txt": "/portfolio/static/js/2.08be2a1e.chunk.js.LICENSE.txt",
     "static/media/about.module.scss": "/portfolio/static/media/circular-bold.f9fedd6f.woff2",
     "static/media/chatapp.5caf81fd.png": "/portfolio/static/media/chatapp.5caf81fd.png",
     "static/media/covidTracker.a36f905f.png": "/portfolio/static/media/covidTracker.a36f905f.png",
@@ -24,6 +24,7 @@
     "static/media/linkedin.03f1d164.svg": "/portfolio/static/media/linkedin.03f1d164.svg",
     "static/media/node.351cbfb3.svg": "/portfolio/static/media/node.351cbfb3.svg",
     "static/media/playlists.2a4a7109.png": "/portfolio/static/media/playlists.2a4a7109.png",
+    "static/media/portfolio.f601b300.png": "/portfolio/static/media/portfolio.f601b300.png",
     "static/media/react.0c61afcf.svg": "/portfolio/static/media/react.0c61afcf.svg",
     "static/media/readdit.40606b8f.png": "/portfolio/static/media/readdit.40606b8f.png",
     "static/media/tesla-clone.6fd4db15.png": "/portfolio/static/media/tesla-clone.6fd4db15.png"
@@ -31,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.43d9a0ba.js",
     "static/css/2.f16753bd.chunk.css",
-    "static/js/2.07880ef7.chunk.js",
-    "static/css/main.b39d9b7b.chunk.css",
-    "static/js/main.d709c349.chunk.js"
+    "static/js/2.08be2a1e.chunk.js",
+    "static/css/main.60fb2cc4.chunk.css",
+    "static/js/main.ebb44acd.chunk.js"
   ]
 }
